@@ -1,6 +1,6 @@
 
 // TODO App Api - Backend
-// TODO App - Frontend
+// TODO - Frontend
 
 /**
  * Use express and set them
@@ -42,7 +42,7 @@ app.post('/api/todo', function(req,res){
     const todo = req.body;
     todo.id = todos.length + 1;
     todos.push(todo);
-    res.json({todoId:todo.id});
+    res.json({todoId:todo.id}); // we need todoId to delete spesific todo
 });
 
 app.delete("/api/todo/:id", function(req,res){
